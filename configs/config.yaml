@@ -1,0 +1,10 @@
+port: ":8080"
+backends:
+  - "http://localhost:8081"
+  - "http://localhost:8082"
+ratelimit:
+  capacity: 10
+  rate: 5
+healthcheck:
+  interval: 3s
+  path: "/health"
