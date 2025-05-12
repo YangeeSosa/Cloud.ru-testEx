@@ -16,7 +16,7 @@
 go mod tidy
 ```
 
-### 2. Настройте конфиг `configs/config.yaml`
+### 2. Конфиг `configs/config.yaml`
 ```yaml
 port: ":8080"
 backends:
@@ -36,12 +36,12 @@ healthcheck:
 - `healthcheck.interval` — интервал проверки бэкендов
 - `healthcheck.path` — путь для health-check (должен возвращать 200)
 
-### 3. Запустите балансировщик
+### 3. Запуск балансировщика
 ```sh
 go run cmd/main.go
 ```
 
-### 4. Запустите бэкенды (пример на Go):
+### 4. Запуск бэкендов:
 ```go
 package main
 import (
